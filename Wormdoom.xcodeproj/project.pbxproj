@@ -7,14 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F8A314B1B26250A000ED289 /* Run.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 6F8A314A1B26250A000ED289 /* Run.atlas */; };
 		6FA080CA1B260C19007FBD2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA080C91B260C19007FBD2A /* AppDelegate.swift */; };
-		6FA080CC1B260C19007FBD2A /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6FA080CB1B260C19007FBD2A /* GameScene.sks */; };
-		6FA080CE1B260C19007FBD2A /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA080CD1B260C19007FBD2A /* GameScene.swift */; };
-		6FA080D01B260C19007FBD2A /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA080CF1B260C19007FBD2A /* GameViewController.swift */; };
 		6FA080D31B260C19007FBD2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FA080D11B260C19007FBD2A /* Main.storyboard */; };
-		6FA080D51B260C19007FBD2A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FA080D41B260C19007FBD2A /* Images.xcassets */; };
 		6FA080D81B260C19007FBD2A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FA080D61B260C19007FBD2A /* LaunchScreen.xib */; };
 		6FA080E41B260C19007FBD2A /* WormdoomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA080E31B260C19007FBD2A /* WormdoomTests.swift */; };
+		6FA080F01B260EE0007FBD2A /* InitialScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA080EF1B260EE0007FBD2A /* InitialScene.swift */; };
+		6FA080F21B260F4A007FBD2A /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA080F11B260F4A007FBD2A /* InitialViewController.swift */; };
+		6FDBA05B1B26120800698047 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FDBA05A1B26120800698047 /* background.png */; };
+		6FDBA05D1B26125100698047 /* transparent PNG in Resources */ = {isa = PBXBuildFile; fileRef = 6FDBA05C1B26125100698047 /* transparent PNG */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,18 +29,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6F8A314A1B26250A000ED289 /* Run.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = Run.atlas; path = "Wormdoom/transparent PNG/Run.atlas"; sourceTree = "<group>"; };
 		6FA080C41B260C19007FBD2A /* Wormdoom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wormdoom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FA080C81B260C19007FBD2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6FA080C91B260C19007FBD2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6FA080CB1B260C19007FBD2A /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		6FA080CD1B260C19007FBD2A /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
-		6FA080CF1B260C19007FBD2A /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		6FA080D21B260C19007FBD2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		6FA080D41B260C19007FBD2A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6FA080D71B260C19007FBD2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		6FA080DD1B260C19007FBD2A /* WormdoomTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WormdoomTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FA080E21B260C19007FBD2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6FA080E31B260C19007FBD2A /* WormdoomTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WormdoomTests.swift; sourceTree = "<group>"; };
+		6FA080EF1B260EE0007FBD2A /* InitialScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialScene.swift; sourceTree = "<group>"; };
+		6FA080F11B260F4A007FBD2A /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		6FDBA05A1B26120800698047 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		6FDBA05C1B26125100698047 /* transparent PNG */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "transparent PNG"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 		6FA080BB1B260C19007FBD2A = {
 			isa = PBXGroup;
 			children = (
+				6F8A314A1B26250A000ED289 /* Run.atlas */,
 				6FA080C61B260C19007FBD2A /* Wormdoom */,
 				6FA080E01B260C19007FBD2A /* WormdoomTests */,
 				6FA080C51B260C19007FBD2A /* Products */,
@@ -81,12 +84,11 @@
 		6FA080C61B260C19007FBD2A /* Wormdoom */ = {
 			isa = PBXGroup;
 			children = (
+				6FDBA0591B26116500698047 /* Images.xcassets */,
 				6FA080C91B260C19007FBD2A /* AppDelegate.swift */,
-				6FA080CB1B260C19007FBD2A /* GameScene.sks */,
-				6FA080CD1B260C19007FBD2A /* GameScene.swift */,
-				6FA080CF1B260C19007FBD2A /* GameViewController.swift */,
+				6FA080EF1B260EE0007FBD2A /* InitialScene.swift */,
+				6FA080F11B260F4A007FBD2A /* InitialViewController.swift */,
 				6FA080D11B260C19007FBD2A /* Main.storyboard */,
-				6FA080D41B260C19007FBD2A /* Images.xcassets */,
 				6FA080D61B260C19007FBD2A /* LaunchScreen.xib */,
 				6FA080C71B260C19007FBD2A /* Supporting Files */,
 			);
@@ -116,6 +118,15 @@
 				6FA080E21B260C19007FBD2A /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6FDBA0591B26116500698047 /* Images.xcassets */ = {
+			isa = PBXGroup;
+			children = (
+				6FDBA05A1B26120800698047 /* background.png */,
+				6FDBA05C1B26125100698047 /* transparent PNG */,
+			);
+			name = Images.xcassets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,9 +210,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				6FA080D81B260C19007FBD2A /* LaunchScreen.xib in Resources */,
-				6FA080D51B260C19007FBD2A /* Images.xcassets in Resources */,
-				6FA080CC1B260C19007FBD2A /* GameScene.sks in Resources */,
 				6FA080D31B260C19007FBD2A /* Main.storyboard in Resources */,
+				6FDBA05D1B26125100698047 /* transparent PNG in Resources */,
+				6FDBA05B1B26120800698047 /* background.png in Resources */,
+				6F8A314B1B26250A000ED289 /* Run.atlas in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,9 +231,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6FA080CE1B260C19007FBD2A /* GameScene.swift in Sources */,
-				6FA080D01B260C19007FBD2A /* GameViewController.swift in Sources */,
+				6FA080F21B260F4A007FBD2A /* InitialViewController.swift in Sources */,
 				6FA080CA1B260C19007FBD2A /* AppDelegate.swift in Sources */,
+				6FA080F01B260EE0007FBD2A /* InitialScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +431,7 @@
 				6FA080E91B260C19007FBD2A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6FA080EA1B260C19007FBD2A /* Build configuration list for PBXNativeTarget "WormdoomTests" */ = {
 			isa = XCConfigurationList;
@@ -427,6 +440,7 @@
 				6FA080EC1B260C19007FBD2A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
