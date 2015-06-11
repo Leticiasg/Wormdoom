@@ -8,7 +8,7 @@
 
 import SpriteKit
 
-class InitialViewController: UIViewController {
+class GameViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,15 +18,14 @@ class InitialViewController: UIViewController {
         initialView.scaleMode = .AspectFill
         
         let skView = self.view as! SKView
-        skView.showsFPS = false
+        skView.showsFPS = true
         skView.showsNodeCount = false
-        skView.showsPhysics = false
+        skView.showsPhysics = true
         skView.presentScene(initialView)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
 
