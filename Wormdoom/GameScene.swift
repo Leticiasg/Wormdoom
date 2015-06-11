@@ -18,7 +18,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
     var ground = Ground(sceneSize: CGSizeZero)
     let ground2 =  Ground(sceneSize: CGSizeZero)
     let player = Player(playerScale: 0.4)
-    let monster = Worm(monsterScale: 0.15)
+    let monster1 = Worm(monsterScale: 0.15)
+    let monster2 = Worm(monsterScale: 0.15)
 
 
     
@@ -26,22 +27,22 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
         setupBackground()
         setupPlayer()
         setupGround()
-        setupMonster()
+        setupMonster(monster1, parent: background)
+        setupMonster(monster2, parent: background2)
         physicsWorld.gravity = CGVector(dx: 0, dy: -2)
         physicsWorld.contactDelegate = self
 
     }
     
-    func setupMonster(){
+    func setupMonster(monster: Worm, parent: SKSpriteNode){
         monster.position = CGPoint(x:scene!.size.width/2 + 100, y: scene!.size.height/2 - 100)
         monster.setupPhysics()
-    //    background.addChild(monster)
-      //  addChild(monster)
+        //parent.addChild(monster)
         monster.animate()
     }
     
     func setupPlayer(){
-        player.position = CGPoint(x:scene!.size.width/2-100, y: scene!.size.height/2-50)
+        player.position = CGPoint(x:scene!.size.width/2, y: scene!.size.height/2-50)
         player.setupPhysics()
         addChild(player)
         player.run()
@@ -87,7 +88,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
         object.position.x = object.position.x - velocity
         if(object.position.x <= -background.size.width){
             object.position.x = background.size.width
-            monster.position = CGPoint(x:scene!.size.width/2 + 100, y: scene!.size.height/2 - 100)
+            for kid in object.children {
+                if let worm = kid as? Worm {
+                 worm.position = CGPoint(x:scene!.size.width/2 + CGFloat(arc4random_uniform(200)), y: scene!.size.height/2 - 100)
+                }
+            }
         }
     }
     

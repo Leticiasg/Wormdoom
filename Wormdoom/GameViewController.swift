@@ -13,7 +13,7 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let initialView = InitialScene()
+        let initialView = LoadingScene()
         initialView.size = self.view.bounds.size
         initialView.scaleMode = .AspectFill
         

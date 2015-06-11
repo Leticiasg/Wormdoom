@@ -9,13 +9,15 @@
 import SpriteKit
 
 class Player: SKSpriteNode {
-    let runAtlas = SKTextureAtlas(named:"Run")
-    let jumpAtlas = SKTextureAtlas(named:"Jump")
-    var runSpriteArray = Array<SKTexture>()
-    var jumpSpriteArray = Array<SKTexture>()
+    static var runAtlas : SKTextureAtlas!
+    static var jumpAtlas : SKTextureAtlas!
+    static var runSpriteArray = Array<SKTexture>()
+    static var jumpSpriteArray = Array<SKTexture>()
     var firstRunFrame : SKTexture!
     
-    init(playerScale: CGFloat){
+    static func atlasInitialize(){
+        Player.runAtlas = SKTextureAtlas(named: "Run")
+        Player.jumpAtlas = SKTextureAtlas(named: "Jump")
         var numImages = runAtlas.textureNames.count
         for var i=1; i<=numImages; i++ {
             let charTextureName = "frame-\(i)"
@@ -27,9 +29,11 @@ class Player: SKSpriteNode {
             let charTextureName = "frame-\(i)"
             jumpSpriteArray.append(jumpAtlas.textureNamed(charTextureName))
         }
-        
-        
-        firstRunFrame = runSpriteArray[0]
+
+    }
+    
+    init(playerScale: CGFloat){
+        firstRunFrame = Player.runSpriteArray[0]
         super.init(texture: firstRunFrame, color: UIColor.clearColor(), size: CGSize(width: firstRunFrame.size().width * playerScale, height: firstRunFrame.size().height * playerScale))
         self.zPosition = 3
     }
@@ -43,13 +47,13 @@ class Player: SKSpriteNode {
     }
     
     func run(){
-        let runAction = SKAction.animateWithTextures(runSpriteArray, timePerFrame: 0.20)
+        let runAction = SKAction.animateWithTextures(Player.runSpriteArray, timePerFrame: 0.20)
         let repeatAction = SKAction.repeatActionForever(runAction)
         self.runAction(repeatAction)
     }
     
     func jump(){
-        let jumpAction = SKAction.animateWithTextures(jumpSpriteArray, timePerFrame: 0.50)
+        let jumpAction = SKAction.animateWithTextures(Player.jumpSpriteArray, timePerFrame: 0.50)
         let repeatAction = SKAction.repeatActionForever(jumpAction)
         self.runAction(repeatAction)
         self.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 130))

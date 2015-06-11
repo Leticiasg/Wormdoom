@@ -9,25 +9,28 @@
 import SpriteKit
 
 class Worm: SKSpriteNode {
-    let monsterAtlas = SKTextureAtlas(named:"Monster")
-    var monsterSpriteArray = Array<SKTexture>()
+    static var monsterAtlas : SKTextureAtlas!
+    static var monsterSpriteArray = Array<SKTexture>()
     var firstFrame : SKTexture!
 
-    init(monsterScale: CGFloat){
+    
+    static func atlasInitialize(){
+        monsterAtlas = SKTextureAtlas(named: "Monster")
         var numImages = monsterAtlas.textureNames.count
         for var i=1; i<=numImages; i++ {
             let charTextureName = "frame-\(i)"
             monsterSpriteArray.append(monsterAtlas.textureNamed(charTextureName))
         }
-        
-        
-        firstFrame = monsterSpriteArray[0]
+    }
+    
+    init(monsterScale: CGFloat){
+        firstFrame = Worm.monsterSpriteArray[0]
         super.init(texture: firstFrame, color: UIColor.clearColor(), size: CGSize(width: firstFrame.size().width * monsterScale, height: firstFrame.size().height * monsterScale))
         self.zPosition = 2
     }
     
     func animate(){
-        let animation = SKAction.animateWithTextures(monsterSpriteArray, timePerFrame: 0.125)
+        let animation = SKAction.animateWithTextures(Worm.monsterSpriteArray, timePerFrame: 0.125)
         
         let repeatAction = SKAction.repeatActionForever(animation)
         self.runAction(repeatAction)

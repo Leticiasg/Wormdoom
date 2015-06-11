@@ -20,6 +20,14 @@ class InitialScene: SKScene {
         setupGround()
     }
     
+    override func willMoveFromView(view: SKView) {
+        for kid in self.children {
+            if (kid.parent != nil) {
+                kid.removeFromParent()
+            }
+        }
+    }
+    
     func setupGround(){
         let ground = SKSpriteNode(imageNamed: "ground")
         ground.yScale = 0.25
